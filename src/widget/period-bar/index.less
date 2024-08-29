@@ -7,7 +7,7 @@
   height: @period-bar-height;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: solid 1px var(--klinecharts-pro-border-color);
+  border-bottom: solid 1px var(--klinechart-view-border-color);
   .menu-container {
     display: flex;
     height: 100%;
@@ -16,13 +16,13 @@
     align-items: center;
     width: @drawing-bar-width;
     box-sizing: border-box;
-    border-right: solid 1px var(--klinecharts-pro-border-color);
+    border-right: solid 1px var(--klinechart-view-border-color);
     svg {
-      fill: var(--klinecharts-pro-text-color);
+      fill: var(--klinechart-view-text-color);
       width: 28px;
       height: 28px;
       cursor: pointer;
-      transition: all .2s;
+      transition: all 0.2s;
       &.rotate {
         transform: rotate(180deg);
         transform-origin: center;
@@ -38,7 +38,7 @@
     padding: 0 12px;
     font-weight: bold;
     box-sizing: border-box;
-    border-right: solid 1px var(--klinecharts-pro-border-color);
+    border-right: solid 1px var(--klinechart-view-border-color);
     cursor: pointer;
     img {
       width: 20px;
@@ -50,10 +50,10 @@
     transition: all 0.2s;
     box-sizing: border-box;
     cursor: pointer;
-    fill: var(--klinecharts-pro-text-color);
+    fill: var(--klinechart-view-text-color);
     &.selected {
-      background-color: var(--klinecharts-pro-selected-color)!important;
-      color: var(--klinecharts-pro-primary-color);
+      background-color: var(--klinechart-view-selected-color) !important;
+      color: var(--klinechart-view-primary-color);
     }
   }
   .period {
@@ -61,13 +61,14 @@
     margin: 0 4px;
     border-radius: 2px;
     &:hover {
-      background-color: var(--klinecharts-pro-hover-background-color);
+      background-color: var(--klinechart-view-hover-background-color);
     }
     &:first-child {
       margin-left: 8px;
     }
   }
-  .symbol + .period, .menu-container + .period {
+  .symbol + .period,
+  .menu-container + .period {
     margin-left: 12px;
   }
   .tools {
@@ -77,10 +78,10 @@
     justify-content: center;
     height: 100%;
     padding: 0 12px;
-    border-right: solid 1px var(--klinecharts-pro-border-color);
+    border-right: solid 1px var(--klinechart-view-border-color);
     &:hover {
-      fill: var(--klinecharts-pro-primary-color);
-      color: var(--klinecharts-pro-primary-color);
+      fill: var(--klinechart-view-primary-color);
+      color: var(--klinechart-view-primary-color);
     }
     svg {
       width: 16px;
@@ -89,7 +90,7 @@
     }
   }
   .period + .tools {
-    border-left: solid 1px var(--klinecharts-pro-border-color);
+    border-left: solid 1px var(--klinechart-view-border-color);
     margin-left: 8px;
   }
 }

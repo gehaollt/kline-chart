@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-import { VoidComponent } from "solid-js";
+import { VoidComponent } from 'solid-js'
 
 const Loding: VoidComponent = () => {
   return (
-    <div class="klinecharts-pro-loading">
+    <div class="klinechart-view-loading">
       <i class="circle1" />
       <i class="circle2" />
       <i class="circle3" />

@@ -19,10 +19,10 @@ For production environments, it is recommended to use a clear version number to 
 
 ```html
 <!-- unpkg -->
-<script src="https://unpkg.com/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://unpkg.com/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 
 <!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ In projects using package managers such as npm and yarn
 // Import js
 import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
 // Import css
-import '@gehaollt/kline-chart/dist/klinecharts-pro.css'
+import '@gehaollt/kline-chart/dist/klinechart-view.css'
 
 // Create Instance
 const chart = new KlineChartView({
@@ -67,12 +67,12 @@ In projects introduced directly through script tags
 
 ```html
 <!-- Import js -->
-<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 
 <!-- Import css -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.css"
+  href="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.css"
 />
 <script>
   // Create Instance

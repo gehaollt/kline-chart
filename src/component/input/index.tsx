@@ -25,11 +25,14 @@ export interface InputProps {
   placeholder?: string
   value: string | number
   disabled?: boolean
-  onChange?: (v: string | number) => void 
+  onChange?: (v: string | number) => void
 }
 
-const Input: Component<InputProps> = p => {
-  const props = mergeProps({ min: Number.MIN_SAFE_INTEGER, max: Number.MAX_SAFE_INTEGER }, p)
+const Input: Component<InputProps> = (p) => {
+  const props = mergeProps(
+    { min: Number.MIN_SAFE_INTEGER, max: Number.MAX_SAFE_INTEGER },
+    p
+  )
   let input: HTMLInputElement
 
   const [status, setStatus] = createSignal('normal')
@@ -37,21 +40,29 @@ const Input: Component<InputProps> = p => {
   return (
     <div
       style={props.style}
-      class={`klinecharts-pro-input ${props.class ?? ''}`}
+      class={`klinechart-view-input ${props.class ?? ''}`}
       data-status={status()}
-      onClick={() => { input?.focus() }}>
+      onClick={() => {
+        input?.focus()
+      }}
+    >
       <Show when={props.prefix}>
         <span class="prefix">{props.prefix}</span>
-      </Show>  
+      </Show>
       <input
-        ref={(el) => { input = el }}
+        ref={(el) => {
+          input = el
+        }}
         class="value"
         placeholder={props.placeholder ?? ''}
         value={props.value}
-        onFocus={() => { setStatus('focus') }}
-        onBlur={() => { setStatus('normal') }}
+        onFocus={() => {
+          setStatus('focus')
+        }}
+        onBlur={() => {
+          setStatus('normal')
+        }}
         onChange={(e) => {
-          // @ts-expect-error
           const v = e.target.value
           if ('precision' in props) {
             let reg
@@ -61,16 +72,20 @@ const Input: Component<InputProps> = p => {
             } else {
               reg = new RegExp('^\\d+\\.?\\d{0,' + decimalDigit + '}$')
             }
-            if (v === '' || (reg.test(v) && +v >= props.min && +v <= props.max)) {
+            if (
+              v === '' ||
+              (reg.test(v) && +v >= props.min && +v <= props.max)
+            ) {
               props.onChange?.(v === '' ? v : +v)
             }
           } else {
             props.onChange?.(v)
           }
-        }}/>
+        }}
+      />
       <Show when={props.suffix}>
         <span class="suffix">{props.suffix}</span>
-      </Show>  
+      </Show>
     </div>
   )
 }

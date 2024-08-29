@@ -31,7 +31,7 @@ export interface SettingModalProps {
   onRestoreDefault: (options: SelectDataSourceItem[]) => void
 }
 
-const SettingModal: Component<SettingModalProps> = props => {
+const SettingModal: Component<SettingModalProps> = (props) => {
   const [styles, setStyles] = createSignal(props.currentStyles)
   const [options, setOptions] = createSignal(getOptions(props.locale))
 
@@ -45,7 +45,7 @@ const SettingModal: Component<SettingModalProps> = props => {
     const ss = utils.clone(styles())
     lodashSet(ss, option.key, newValue)
     setStyles(ss)
-    setOptions(options().map(op => ({ ...op })))
+    setOptions(options().map((op) => ({ ...op })))
     props.onChange(style)
   }
 
@@ -59,54 +59,54 @@ const SettingModal: Component<SettingModalProps> = props => {
           onClick: () => {
             props.onRestoreDefault(options())
             props.onClose()
-          }
-        }
+          },
+        },
       ]}
-      onClose={props.onClose}>
-      <div
-        class="klinecharts-pro-setting-modal-content">
+      onClose={props.onClose}
+    >
+      <div class="klinechart-view-setting-modal-content">
         <For each={options()}>
-          {
-            option => {
-              let component
-              const value = utils.formatValue(styles(), option.key)
-              switch (option.component) {
-                case 'select': {
-                  component = (
-                    <Select
-                      style={{ width: '120px' }}
-                      value={i18n(value as string, props.locale)}
-                      dataSource={option.dataSource}
-                      onSelected={(data) => {
-                        const newValue = (data as SelectDataSourceItem).key
-                        update(option, newValue)
-                      }}/>
-                  )
-                  break
-                }
-                case 'switch': {
-                  const open = !!value
-                  component = (
-                    <Switch
-                      open={open}
-                      onChange={() => {
-                        const newValue = !open
-                        update(option, newValue)
-                      }}/>
-                  )
-                  break
-                }
+          {(option) => {
+            let component
+            const value = utils.formatValue(styles(), option.key)
+            switch (option.component) {
+              case 'select': {
+                component = (
+                  <Select
+                    style={{ width: '120px' }}
+                    value={i18n(value as string, props.locale)}
+                    dataSource={option.dataSource}
+                    onSelected={(data) => {
+                      const newValue = (data as SelectDataSourceItem).key
+                      update(option, newValue)
+                    }}
+                  />
+                )
+                break
               }
-              return (
-                <>
-                  <span>{option.text}</span>
-                  {component}
-                </>
-              )
+              case 'switch': {
+                const open = !!value
+                component = (
+                  <Switch
+                    open={open}
+                    onChange={() => {
+                      const newValue = !open
+                      update(option, newValue)
+                    }}
+                  />
+                )
+                break
+              }
             }
-          }
+            return (
+              <>
+                <span>{option.text}</span>
+                {component}
+              </>
+            )
+          }}
         </For>
-      </div> 
+      </div>
     </Modal>
   )
 }

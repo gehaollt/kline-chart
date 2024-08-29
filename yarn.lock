@@ -1502,7 +1502,7 @@ babel-plugin-jsx-dom-expressions@^0.38.5:
     html-entities "2.3.3"
     validate-html-nesting "^1.2.1"
 
-babel-preset-solid@^1.6.10, babel-preset-solid@^1.8.4:
+babel-preset-solid@^1.8.22, babel-preset-solid@^1.8.4:
   version "1.8.22"
   resolved "https://repo.huaweicloud.com/repository/npm/babel-preset-solid/-/babel-preset-solid-1.8.22.tgz#196e0a2bb9f82ec7367784c3f3e9f9e32430879d"
   integrity sha512-nKwisb//lZsiRF2NErlRP64zVTJqa1OSZiDnSl0YbcTiCZoMt52CY2Pg+9fsYAPtjYMT7RHBmzU41pxK6hFOcg==
@@ -3019,6 +3019,11 @@ keyv@^4.5.3:
   dependencies:
     json-buffer "3.0.1"
 
+klinecharts@^9.8.10:
+  version "9.8.10"
+  resolved "https://repo.huaweicloud.com/repository/npm/klinecharts/-/klinecharts-9.8.10.tgz#cc177e8a016e265e36c5a1a47ff4a5ba07f4d225"
+  integrity sha512-4h0u749uprwaw8CifpegpjHzHnw/I9VTYb2wkUtBQqWnUPvxS4IpkkyMAwPcYbuzXWoqfqFGO02sRd3QDW4sbQ==
+
 less-loader@^11.1.0:
   version "11.1.4"
   resolved "https://repo.huaweicloud.com/repository/npm/less-loader/-/less-loader-11.1.4.tgz#e8a070844efaefbe59b978acaf57b9d3e868cf08"
@@ -3738,7 +3743,7 @@ slice-ansi@^5.0.0:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
 
-solid-js@^1.6.11:
+solid-js@^1.8.22:
   version "1.8.22"
   resolved "https://repo.huaweicloud.com/repository/npm/solid-js/-/solid-js-1.8.22.tgz#6df23f8a172eb14395a2984261e5782397d0a74a"
   integrity sha512-VBzN5j+9Y4rqIKEnK301aBk+S7fvFSTs9ljg+YEdFxjNjH0hkjXPiQRcws9tE5fUzMznSS6KToL5hwMfHDgpLA==

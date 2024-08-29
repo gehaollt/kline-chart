@@ -25,28 +25,20 @@ export interface ListProps extends ParentProps {
   renderItem?: (data: any) => JSX.Element
 }
 
-const List: ParentComponent<ListProps> = props => {
+const List: ParentComponent<ListProps> = (props) => {
   return (
-    <ul
-      style={props.style}
-      class={`klinecharts-pro-list ${props.class ?? ''}`}>
+    <ul style={props.style} class={`klinechart-view-list ${props.class ?? ''}`}>
       <Show when={props.loading}>
-        <Loading/>
-      </Show>
-      <Show when={!props.loading && !props.children && !props.dataSource?.length}>
-        <Empty/>
+        <Loading />
       </Show>
       <Show
-        when={props.children}>
-        {props.children}
+        when={!props.loading && !props.children && !props.dataSource?.length}
+      >
+        <Empty />
       </Show>
-      <Show
-        when={!props.children}>
-        {
-          props.dataSource?.map(data => (
-            props.renderItem?.(data) ?? <li></li>
-          ))
-        }
+      <Show when={props.children}>{props.children}</Show>
+      <Show when={!props.children}>
+        {props.dataSource?.map((data) => props.renderItem?.(data) ?? <li></li>)}
       </Show>
     </ul>
   )

@@ -19,10 +19,10 @@ yarn install klinecharts @gehaollt/kline-chart
 
 ```html
 <!-- unpkg -->
-<script src="https://unpkg.com/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://unpkg.com/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 
 <!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 ```
 
 ## 使用
@@ -41,7 +41,7 @@ yarn install klinecharts @gehaollt/kline-chart
 // 引入js
 import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
 // 引入样式
-import '@gehaollt/kline-chart/dist/klinecharts-pro.css'
+import '@gehaollt/kline-chart/dist/klinechart-view.css'
 
 // 创建实例
 const chart = new KlineChartView({
@@ -67,12 +67,12 @@ const chart = new KlineChartView({
 
 ```html
 <!-- 引入js -->
-<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.umd.js"></script>
 
 <!-- 引入css -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinecharts-pro.css"
+  href="https://cdn.jsdelivr.net/@gehaollt/kline-chart/dist/klinechart-view.css"
 />
 <script>
   // 创建实例

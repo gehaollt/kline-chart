@@ -24,13 +24,17 @@ import data from './data'
 
 export interface IndicatorSettingModalProps {
   locale: string
-  params: { indicatorName: string, paneId: string, calcParams: any[] }
+  params: { indicatorName: string; paneId: string; calcParams: any[] }
   onClose: () => void
   onConfirm: (calcParams: any) => void
 }
 
-const IndicatorSettingModal: Component<IndicatorSettingModalProps> = props => {
-  const [calcParams, setCalcParams] = createSignal(utils.clone(props.params.calcParams))
+const IndicatorSettingModal: Component<IndicatorSettingModalProps> = (
+  props
+) => {
+  const [calcParams, setCalcParams] = createSignal(
+    utils.clone(props.params.calcParams)
+  )
 
   const getConfig: (name: string) => any[] = (name: string) => {
     // @ts-expect-error
@@ -59,32 +63,31 @@ const IndicatorSettingModal: Component<IndicatorSettingModalProps> = props => {
             })
             props.onConfirm(params)
             props.onClose()
-          }
-        }
+          },
+        },
       ]}
-      onClose={props.onClose}>
-      <div class="klinecharts-pro-indicator-setting-modal-content">
-        {
-          getConfig(props.params.indicatorName).map((d, i) => {
-            return (
-              <>
-                <span >{i18n(d.paramNameKey, props.locale)}</span>
-                <Input
-                  style={{ width: '200px' }}
-                  value={calcParams()[i] ?? ''}
-                  precision={d.precision}
-                  min={d.min}
-                  onChange={value => {
-                    const params = utils.clone(calcParams())
-                    params[i] = value
-                    setCalcParams(params)
-                  }}/>
-              </>
-            )
-          })
-        }
+      onClose={props.onClose}
+    >
+      <div class="klinechart-view-indicator-setting-modal-content">
+        {getConfig(props.params.indicatorName).map((d, i) => {
+          return (
+            <>
+              <span>{i18n(d.paramNameKey, props.locale)}</span>
+              <Input
+                style={{ width: '200px' }}
+                value={calcParams()[i] ?? ''}
+                precision={d.precision}
+                min={d.min}
+                onChange={(value) => {
+                  const params = utils.clone(calcParams())
+                  params[i] = value
+                  setCalcParams(params)
+                }}
+              />
+            </>
+          )
+        })}
       </div>
-      
     </Modal>
   )
 }

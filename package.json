@@ -3,8 +3,8 @@
   "version": "0.1.1",
   "description": "Financial chart built out of the box based on KLineChart.",
   "type": "module",
-  "main": "./dist/klinecharts-pro.umd.js",
-  "module": "./dist/klinecharts-pro.js",
+  "main": "./dist/klinechart-view.umd.js",
+  "module": "./dist/klinechart-view.js",
   "types": "./dist/index.d.ts",
   "files": [
     "LICENSE",
@@ -29,7 +29,7 @@
   "private": false,
   "scripts": {
     "build-core": "tsc && vite build",
-    "build-dts": "dts-bundle-generator --no-banner true --umd-module-name klinechartspro -o dist/index.d.ts src/index.ts",
+    "build-dts": "dts-bundle-generator --no-banner true --umd-module-name KineChartView -o dist/index.d.ts src/index.ts",
     "build": "npm run build-core && npm run build-dts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -42,7 +42,7 @@
     "@types/lodash": "^4.14.191",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "babel-preset-solid": "^1.6.10",
+    "babel-preset-solid": "^1.8.22",
     "dts-bundle-generator": "^7.2.0",
     "eslint": "^8.35.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
@@ -59,10 +59,8 @@
     "vitest": "^0.28.4"
   },
   "dependencies": {
+    "klinecharts": "^9.8.10",
     "lodash": "^4.17.21",
-    "solid-js": "^1.6.11"
-  },
-  "peerDependencies": {
-    "klinecharts": ">=9.0.0"
+    "solid-js": "^1.8.22"
   }
 }

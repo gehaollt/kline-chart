@@ -13,11 +13,11 @@ export default defineConfig({
       output: {
         assetFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'style.css') {
-            return 'klinecharts-pro.css'
+            return 'klinechart-view.css'
           }
         },
         globals: {
-          klinecharts: 'klinecharts'
+          klinecharts: 'klinecharts',
         },
       },
     },
@@ -26,12 +26,12 @@ export default defineConfig({
       name: 'klinechartspro',
       fileName: (format) => {
         if (format === 'es') {
-          return 'klinecharts-pro.js'
+          return 'klinechart-view.js'
         }
         if (format === 'umd') {
-          return 'klinecharts-pro.umd.js'
+          return 'klinechart-view.umd.js'
         }
-      }
-    }
-  }
+      },
+    },
+  },
 })
