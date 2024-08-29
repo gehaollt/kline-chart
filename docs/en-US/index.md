@@ -4,7 +4,7 @@ title: Financial chart built out of the box based on KLineChart
 layout: home
 
 hero:
-  name: KLineChart Pro
+  name: kline-chart
   text: Financial chart built out of the box based on KLineChart
   tagline: Use KLineChart like a Pro
   actions:
@@ -13,5 +13,5 @@ hero:
       link: /en-US/getting-started
     - theme: alt
       text: View on Github
-      link: https://github.com/klinecharts/pro
+      link: https:///github.com/gehaollt/kline-chart
 ---

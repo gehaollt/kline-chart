@@ -4,7 +4,7 @@ title: 基于KLineChart构建的开箱即用的金融图表
 layout: home
 
 hero:
-  name: KLineChart Pro
+  name: kline-chart
   text: 基于KLineChart构建的开箱即用的金融图表
   tagline: 像专业人士一样使用KLineChart
   actions:
@@ -13,5 +13,5 @@ hero:
       link: /getting-started
     - theme: alt
       text: 在 Github 上查看
-      link: https://github.com/klinecharts/pro
+      link: https:///github.com/gehaollt/kline-chart
 ---
