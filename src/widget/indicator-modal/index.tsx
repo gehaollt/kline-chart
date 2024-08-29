@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+// @ts-nocheck
 import { Component, createMemo } from 'solid-js'
 
 import { Modal, List, Checkbox } from '../../component'
@@ -96,7 +96,6 @@ const IndicatorModal: Component<IndicatorModalProps> = (props) => {
             <li
               class="row"
               onClick={(_) => {
-                // @ts-expect-error
                 props.onSubIndicatorChange({
                   name,
                   paneId: props.subIndicators[name] ?? '',

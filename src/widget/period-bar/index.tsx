@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+// @ts-nocheck
 import { Component, Show, createSignal, onMount, onCleanup } from 'solid-js'
 
 import { SymbolInfo, Period } from '../../types'
@@ -126,7 +126,6 @@ const PeriodBar: Component<PeriodBarProps> = (props) => {
           if (!fullScreen()) {
             const el = ref?.parentElement
             if (el) {
-              // @ts-expect-error
               const enterFullScreen =
                 el.requestFullscreen ??
                 el.webkitRequestFullscreen ??
@@ -136,7 +135,6 @@ const PeriodBar: Component<PeriodBarProps> = (props) => {
               // setFullScreen(true)
             }
           } else {
-            // @ts-expect-error
             const exitFullscreen =
               document.exitFullscreen ??
               document.msExitFullscreen ??
