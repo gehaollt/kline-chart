@@ -39,12 +39,12 @@ yarn install klinecharts @gehaollt/kline-chart
 
 ```javascript
 // 引入js
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
 // 引入样式
 import '@gehaollt/kline-chart/dist/klinecharts-pro.css'
 
 // 创建实例
-const chart = new KLineChartPro({
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   // 初始化标的信息
   symbol: {
@@ -76,7 +76,7 @@ const chart = new KLineChartPro({
 />
 <script>
   // 创建实例
-  const chart = new klinechartspro.KLineChartPro({
+  const chart = new klinechartspro.KlineChartView({
     container: document.getElementById('container'),
     // 初始化标的信息
     symbol: {

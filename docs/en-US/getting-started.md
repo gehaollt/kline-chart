@@ -39,12 +39,12 @@ In projects using package managers such as npm and yarn
 
 ```javascript
 // Import js
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
 // Import css
 import '@gehaollt/kline-chart/dist/klinecharts-pro.css'
 
 // Create Instance
-const chart = new KLineChartPro({
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   // Default symbol info
   symbol: {
@@ -76,7 +76,7 @@ In projects introduced directly through script tags
 />
 <script>
   // Create Instance
-  const chart = new klinechartspro.KLineChartPro({
+  const chart = new klinechartspro.KlineChartView({
     container: document.getElementById('container'),
     // Default symbol info
     symbol: {

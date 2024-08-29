@@ -8,8 +8,8 @@ The default data source is https://polygon.io/. You need to apply for an API key
 Sample,
 
 ```typescript
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
-const chart = new KLineChartPro({
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   datafeed: new DefaultDatafeed(`${polygonIoApiKey}`),
 })
@@ -75,8 +75,8 @@ class CustomDatafeed {
 ### Step 2: Access custom data
 
 ```typescript
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
-const chart = new KLineChartPro({
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   datafeed: new CustomDatafeed(),
 })

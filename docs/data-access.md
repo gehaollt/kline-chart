@@ -8,8 +8,8 @@
 示例：
 
 ```typescript
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
-const chart = new KLineChartPro({
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   datafeed: new DefaultDatafeed(`${polygonIoApiKey}`),
 })
@@ -75,8 +75,8 @@ class CustomDatafeed {
 ### 第二步，接入自定义数据
 
 ```typescript
-import { KLineChartPro, DefaultDatafeed } from '@gehaollt/kline-chart'
-const chart = new KLineChartPro({
+import { KlineChartView, DefaultDatafeed } from '@gehaollt/kline-chart'
+const chart = new KlineChartView({
   container: document.getElementById('container'),
   datafeed: new CustomDatafeed(),
 })

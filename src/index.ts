@@ -17,22 +17,32 @@ import { registerOverlay } from 'klinecharts'
 import overlays from './extension'
 
 import DefaultDatafeed from './DefaultDatafeed'
-import KLineChartPro from './KLineChartPro'
+import KlineChartView from './KlineChartView'
 
 import { load } from './i18n'
 
-import { Datafeed, SymbolInfo, Period, DatafeedSubscribeCallback, ChartProOptions, ChartPro } from './types'
+import {
+  Datafeed,
+  SymbolInfo,
+  Period,
+  DatafeedSubscribeCallback,
+  ChartProOptions,
+  ChartPro,
+} from './types'
 
 import './index.less'
 
-overlays.forEach(o => { registerOverlay(o) })
+overlays.forEach((o) => {
+  registerOverlay(o)
+})
 
-export {
-  DefaultDatafeed,
-  KLineChartPro,
-  load as loadLocales
-}
+export { DefaultDatafeed, KlineChartView, load as loadLocales }
 
 export type {
-  Datafeed, SymbolInfo, Period, DatafeedSubscribeCallback, ChartProOptions, ChartPro
+  Datafeed,
+  SymbolInfo,
+  Period,
+  DatafeedSubscribeCallback,
+  ChartProOptions,
+  ChartPro,
 }
